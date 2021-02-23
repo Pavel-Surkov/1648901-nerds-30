@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Нёрдс</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
-
-  </body>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<header class="header">
+		<nav class="header__navigation">
+			<img class="navigation__logo" src="img/nerds-logo.svg" width="160" height="65" alt="nerds logo">
+			<a href="#" class="navigation__link">Студия</a>
+			<a href="#" class="navigation__link">Клиенты</a>
+			<a href="#" class="navigation__link">Магазин</a>
+			<a href="#" class="navigation__link">Контакты</a>
+			<a href="#" class="navigation__basket">Корзина</a>
+		</nav>
+	</header>
+	<main class="main">
+		<h1 class="main__header">Долго, дорого, скурпулезно</h1>
+		<img class="main__picture" src="img/main-pic.png">
+		<p class="main__underheader">Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+		<button class="main__button">Узнать больше</button>
+		<div class="main__slider"></div> <!--сделать через градиент резкий и z-index, :before, :after-->
+	</main>
+</body>
 </html>

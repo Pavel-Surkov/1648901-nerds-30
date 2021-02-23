@@ -1,0 +1,44 @@
+@font-face {
+	font-family: "Roboto";
+	src: url(../fonts/roboto.woff);
+	src: url(../fonts/roboto.woff2);
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url(../fonts/robotomedium.woff);
+	src: url(../fonts/robotomedium.woff2);
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Roboto";
+	src: url(../fonts/robotobold.woff);
+	src: url(../fonts/robotobold.woff2);
+	font-weight: 700;
+}
+
+body {
+	font-family: "Roboto", "Arial", sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+
+	background-color: #EEE;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header__navigation {
+	display: grid;
+	grid-template-columns: 4fr 1fr 1fr 1fr 1fr 4fr;
+	text-transform: uppercase;
+}
+.main {
+	height: 431px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 78px 136px/*padding-bottom: 25px*/ 87px 50px 80px;
+}
+.main__header {
+	font-size: 55px;
+	line-height: 55px;
+	font-weight: 500;
+}

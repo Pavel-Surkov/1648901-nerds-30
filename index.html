@@ -18,12 +18,23 @@
 			<a href="#" class="navigation__basket">Корзина</a>
 		</nav>
 	</header>
-	<main class="main">
-		<h1 class="main__header">Долго, дорого, скурпулезно</h1>
-		<img class="main__picture" src="img/main-pic.png">
-		<p class="main__underheader">Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-		<button class="main__button">Узнать больше</button>
-		<div class="main__slider"></div> <!--сделать через градиент резкий и z-index, :before, :after-->
+	<section class="wrapper__main">
+		<div class="main__slide-text">
+			<h1 class="slide-text__header">Долго, дорого, скурпулезно</h1>
+			<p class="slide-text__underheader">
+			Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+			<button class="slide-text__button">Узнать больше</button>
+		</div>
+		<img class="main__slide-picture" src="img/main-pic.png">
+	</section>
+	<main class="wrapper">
+		<section class="list">
+			<div class="list__offer"></div>
+			<div class="list__offer"></div>
+			<div class="list__offer"></div>
+			<div class="list__offer"></div>
+			<!-- Картинки в div вставлять с object-fit: contain! -->
+		</section>
 	</main>
 </body>
 </html>

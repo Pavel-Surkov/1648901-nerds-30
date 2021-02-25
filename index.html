@@ -8,31 +8,47 @@
 	<title>Document</title>
 </head>
 <body>
-	<header class="header">
-		<nav class="header__navigation">
-			<img class="navigation__logo" src="img/nerds-logo.svg" width="160" height="65" alt="nerds logo">
-			<a href="#" class="navigation__link">Студия</a>
-			<a href="#" class="navigation__link">Клиенты</a>
-			<a href="#" class="navigation__link">Магазин</a>
-			<a href="#" class="navigation__link">Контакты</a>
-			<a href="#" class="navigation__basket">Корзина</a>
-		</nav>
-	</header>
-	<section class="wrapper__main">
-		<div class="main__slide-text">
-			<h1 class="slide-text__header">Долго, дорого, скурпулезно</h1>
-			<p class="slide-text__underheader">
-			Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-			<button class="slide-text__button">Узнать больше</button>
-		</div>
-		<img class="main__slide-picture" src="img/main-pic.png">
-	</section>
+	<div class="background_gray">
+		<header class="header">
+			<nav class="header__navigation">
+				<img class="navigation__logo" src="img/nerds-logo.svg" width="160" height="65" alt="nerds logo">
+				<a href="#" class="navigation__link">Студия</a>
+				<a href="#" class="navigation__link">Клиенты</a>
+				<a href="#" class="navigation__link">Магазин</a>
+				<a href="#" class="navigation__link">Контакты</a>
+				<a href="#" class="navigation__basket">Корзина</a>
+			</nav>
+		</header>
+		<section class="main">
+			<div class="main__slide-text">
+				<h1 class="slide-text__header">Долго, дорого, скурпулезно</h1>
+				<p class="slide-text__underheader">
+				Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
+				<button class="slide-text__button">Узнать больше</button>
+			</div>
+			<img class="main__slide-picture" src="img/main-pic.png">
+		</section>
+	</div>
 	<main class="wrapper">
 		<section class="list">
-			<div class="list__offer"></div>
-			<div class="list__offer"></div>
-			<div class="list__offer"></div>
-			<div class="list__offer"></div>
+			<article class="list__offer">
+				<img class="offer__picture" src="img/illustration-1 1.jpg">
+				<h3 class="offer__header">Веб-сайты</h3>
+				<p class="offer__text">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
+				<button class="offer__button">Заказать</button>
+			</article>
+			<article class="list__offer">
+				<img class="offer__picture" src="img/illustration-2 1.jpg">
+				<h3 class="offer__header">Приложения</h3>
+				<p class="offer__text">Покорите топ-10 приложений в AppStore и Google Play</p>
+				<button class="offer__button">Заказать</button>
+			</article>
+			<article class="list__offer">
+				<img class="offer__picture" src="img/illustration-3 1.jpg">
+				<h3 class="offer__header">Презентации</h3>
+				<p class="offer__text">Вы даже не подозреваете, насколько вы изумительны!</p>
+				<button class="offer__button">Заказать</button>
+			</article>
 			<!-- Картинки в div вставлять с object-fit: contain! -->
 		</section>
 	</main>

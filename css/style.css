@@ -23,10 +23,13 @@ body {
 	line-height: 24px;
 	background-color: #FFF;
 }
-.header {
-	max-width: 80.555555556%;
-	padding: 0 9.722222222%;
+.background_gray {
 	background-color: #EEE;
+}
+.header {
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: inherit;
 }
 .header__navigation {
 	display: grid;
@@ -34,14 +37,14 @@ body {
 	text-transform: uppercase;
 }
 .wrapper {
-	max-width: 80.555555556%;
-	padding: 0 9.722222222%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
-.wrapper__main {
+.main {
 	height: 431px;
 	display: flex;
-	max-width: 80.555555556%;
-	padding: 0 9.722222222%;
+	max-width: 1200px;
+	margin: 0 auto;
 	background-color: #EEE;
 }
 .slide-text__header  {
@@ -50,12 +53,13 @@ body {
 	font-weight: 500;
 	max-height: 214px;
 	width: auto;
-	padding: 78px 0 25px 0;
+	margin-top: 78px;
 }
 .slide-text__underheader {
-	margin: 0 0 38px 0;
+	margin-top: 25px;
 }
 .slide-text__button {
+	margin-top: 38px;
 	width: 54.545455%;
 	height: 11.60093%;
 	background-color: #FB565A;
@@ -78,10 +82,26 @@ body {
 }
 .list__offer {
 	min-height: 347px;
-	width: 25%;
+	max-width: 25%;
 	margin: 0 12% 80px 0;
 	background-color: #EEE;
 }
 .list__offer:nth-child(3n) {
 	margin-right: 0;
+}
+.offer__picture {
+	margin-bottom: 25px;
+}
+.offer__header {
+	text-transform: uppercase;
+	margin: 0;
+}
+.offer__text {
+	max-width: 260px;
+	margin-bottom: 32px;
+}
+.offer__button {
+	width: 53.333333%;
+	height: 50px;
+	text-transform: uppercase;
 }

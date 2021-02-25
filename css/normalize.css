@@ -352,7 +352,11 @@ template {
 [hidden] {
   display: none;
 }
-
+p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
 input {
   border: none;
 }
@@ -361,10 +365,12 @@ form {
   position: absolute;
 }
 h2 {
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 26px;
+  font-size: 45px;
+  font-weight: 500;
+  line-height: 45px;
 }
-input {
+h3 {
+  font-size: 24px;
+  line-height: 24px;
   font-weight: 700;
 }

@@ -236,3 +236,11 @@ body {
 .advantage__description {
 	margin: 0;
 }
+
+.partners {
+	min-height: 180px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}

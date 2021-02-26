@@ -244,3 +244,26 @@ body {
 	align-items: center;
 	justify-content: space-around;
 }
+.partners__link {
+	display: flex;
+	height: 180px;
+	align-items: center;
+	justify-content: center;
+	width: 20%;
+}
+.link__logo:hover g,
+.link__logo:hover rect{
+	opacity: 1;
+}
+.link__logo:active g,
+.link__logo:active rect{
+	opacity: 0.1;
+}
+.partners__stick {
+	transform: rotate(90deg);
+	width: 52px;
+	height: 2px;
+	background-color: #EEE;
+	border: none;
+	margin: 0;
+}

@@ -295,11 +295,6 @@ body {
 	color: #666;
 	line-height: 18px;
 }
-.location__write-us {
-	display: block;
-	width: 100%;
-	margin-top: 40px;
-}
 .write-us__button {
 	text-transform: uppercase;
 	height: 50px;
@@ -308,6 +303,7 @@ body {
 	color: white;
 	background-color: #FB565A;
 	border-radius: 3px;
+	margin-top: 40px;
 }
 .footer {
 	height: 217px;
@@ -337,4 +333,44 @@ body {
 }
 .footer__sale__text {
 	margin-top: 0;
+}
+
+/*Поп-ап*/
+
+.location__popup {
+	position: absolute;
+	max-width: 960px;
+	min-height: 590px;
+	padding: 63px 100px 84px 100px;
+	justify-content: center;
+	display: grid;
+	grid-template-rows: 53px 80px 145px;
+	grid-row-gap: 34px;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 40px;
+	background-color: #FFF;
+}
+.popup__header {
+	grid-area: 1 / 1 / 2 / 3;
+	margin: 0;
+}
+.popup__name {
+	display: block;
+	margin-top: 3px;
+}
+.name-input,
+.email-input,
+.letter-input {
+	border: 2px solid #D7DCDE;
+	border-radius: 3px;
+}
+.popup__email {
+	display: block;
+	margin-top: 3px;
+}
+.popup__text-block {
+	grid-area: 3 / 1 / 4 / 3;
+}
+.popup__text {
+	display: block;
 }

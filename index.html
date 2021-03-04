@@ -177,27 +177,32 @@
 		<hr class="underline">
 	</main>
 	<section class="location">
-		<div class="location__adress-block">
-			<h3 class="location__header">NЁRDS DESIGN STUDIO</h3>
-			<p class="location__adress-text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-			<br>тел. +7 (812) 275-75-75</p>
-			<button class="write-us__button">Напишите нам</button>
-		</div>
 		<form class="location__popup">
 			<h2 class="popup__header">Напишите нам</h2>
+			<svg class="popup__close"></svg>
 			<div class="popup__name-block">
-				<label class="popup__name">Ваше имя:</label><input class="name-input" type="text" name="name" 
+				<label class="popup__name" for="name">Ваше имя:</label><input class="name-input" type="text" name="name" 
 				placeholder="Имя Фамилия">
 			</div>
 			<div class="popup__email-block">
-				<label class="popup__email">Ваш email:</label><input class="email-input" type="text" name="email" 
+				<label class="popup__email" for="email">Ваш email:</label><input class="email-input" type="text" name="email" 
 				placeholder="email@example.com">
 			</div>
 			<div class="popup__text-block">
-				<label class="popup__text">Текст письма:</label><input class="letter-input" type="text" name="letter" 
-				placeholder="В свободной форме">
+				<label class="popup__text" for="letter">Текст письма:</label><textarea class="letter-input" type="text" name="letter" placeholder="В свободной форме"></textarea>
+			</div>
+			<div class="popup__button-block">
+				<button type="submit" class="popup__button">Отправить</button>
 			</div>
 		</form>
+		<div class="location__map-block">
+			<div class="location__adress-block">
+				<h3 class="location__header">NЁRDS DESIGN STUDIO</h3>
+				<p class="location__adress-text">191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+				<br>тел. +7 (812) 275-75-75</p>
+				<button class="write-us__button">Напишите нам</button>
+			</div>
+		</div>
 	</section>
 	<footer class="footer">
 		<div class="footer__icon">

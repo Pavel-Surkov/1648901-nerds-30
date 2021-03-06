@@ -10,3 +10,9 @@ node_modules/
 npm-debug.*
 Thumbs.db
 img/
+.gitignore
+package*
+*.map
+gulpfile.js
+*.min.css
+*.css

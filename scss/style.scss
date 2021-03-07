@@ -521,6 +521,7 @@ body {
 
 	&__header {
 		font-weight: $average;
+		@include fontz(55px);
 	}
 }
 
@@ -545,6 +546,27 @@ body {
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		background-color: #EFEFEF;
+		@extend %flex;
 	}
 }
+
+.crumbs-item {
+	@include fontz(14px);
+	margin: 0 25px 10px 0;
+	font-weight: $light;
+	height: auto;
+
+	&__link {
+		color: rgba(0, 0, 0, 0.3);
+
+		&:focus, &:active {
+			outline: none;
+		}
+	}
+}
+
+.link_active {
+	color: rgba(0, 0, 0, 1);
+	outline: none;
+}
+

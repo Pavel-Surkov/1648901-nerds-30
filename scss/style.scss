@@ -563,6 +563,18 @@ body {
 			outline: none;
 		}
 	}
+
+	&__triangle {
+		margin-right: 18px;
+	}
+
+	&__triangle:last-child {
+		margin-right: 0;
+	}
+}
+
+.crumbs-item:nth-child(3n) {
+	margin-right: 47px;
 }
 
 .link_active {
@@ -570,3 +582,13 @@ body {
 	outline: none;
 }
 
+.triangle {
+
+	&_down {
+		transform: rotate(180deg);
+	}
+
+	&_active path {
+		fill: #000;
+	}
+}

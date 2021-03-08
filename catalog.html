@@ -37,16 +37,22 @@
 			<p class="sort-panel__sort">Сортировать:</p>
 			<ul class="sort-panel__crumbs">
 				<li class="crumbs-item">
-					<a class="crumbs-item__link link_active" href="##" tabindex="0" onclick="rad(this)">По цене
+					<a class="crumbs-item__link link_active" href="##" tabindex="0" onclick="crumbActive(this)">По цене</a>
 				</li>
 				<li class="crumbs-item">
-					<a class="crumbs-item__link" href="##" tabindex="0" onclick="rad(this)">По типу
+					<a class="crumbs-item__link" href="##" tabindex="0" onclick="crumbActive(this)">По типу</a>
 				</li>
 				<li class="crumbs-item">
-					<a class="crumbs-item__link" href="##" tabindex="0" onclick="rad(this)">По названию
+					<a class="crumbs-item__link" href="##" tabindex="0" onclick="crumbActive(this)">По названию</a>
 				</li>
-				<li class="crumbs-item"></li>
-				<li class="crumbs-item"></li>
+				<li class="crumbs-item">
+					<svg onclick="triangleActive(this)" class="crumbs-item__triangle triangle_down triangle_active" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6"/>
+					</svg>
+					<svg onclick="triangleActive(this)" class="crumbs-item__triangle" width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5.5 0L0 10H11L5.5 0Z" fill="#A6A6A6"/>
+					</svg>
+				</li>
 			</ul>
 		</div>
 	</section>

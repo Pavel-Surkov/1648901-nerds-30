@@ -19,3 +19,13 @@ function triangleActive(element) {
 	}
 	element.classList.add('triangle_active');
 }
+
+function radio(element) {
+	document.querySelector('.radio-item_active')
+	.classList.remove('radio-item_active');
+	element.classList.add('radio-item_active');
+}
+
+function checkbox(element) {
+	element.classList.toggle('checkbox-item_active');
+}

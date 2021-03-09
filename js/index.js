@@ -5,3 +5,9 @@ function redUnder(element) {
 	}
 	element.classList.add('navigation__link_active');
 }
+
+function radio(element) {
+	document.querySelector('.radio-item_active')
+	.classList.remove('radio-item_active');
+	element.classList.add('radio-item_active');
+}

@@ -3,6 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="img/icons/32.png">
+	<link rel="icon" href="img/icons/favicon.ico">
+	<link rel="icon" href="img/icons/152.png">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.min.css">
 	<title>Нердс магазин</title>
@@ -58,23 +61,49 @@
 		<div class="general">
 			<form class="customize">
 				<div class="range">
-					<div class="range__controls">
-						<div class="range__scale">
-							<div class="bar" style="width: 80%; margin-left: 0%"></div>
-						</div>
-						<div class="renge__toggle toggle_min" tabindex="0" style="margin-left: 0%"
-						aria-label="Минимальная стоимость в сутки"></div>
+					<div class="range__scale">
+						<div class="range__bar" style="width: 80%"></div>
+						<div class="range__toggle toggle_min" tabindex="0" style="margin-left: 0%" aria-label="Минимальная стоимость в сутки"></div>
 						<div class="range__toggle toggle_max" tabindex="0" style="margin-left: 80%"aria-label="Максимальная стоимость в сутки"></div>
 					</div>
 				</div>
-				<!-- <div class="range__inputs">
-					<input class="range__input_from" type="text" name="from" value="ОТ 0">
-					<div class="range__input_stick"></div>
-					<input class="input-to" type="text" name="to" value="ДО 3000">
-				</div> -->
-				<div>
-					
+				<div class="range__inputs">
+					<div class="range__block-from">
+						<label class="range__from" for="from">От</label>
+						<input class="range__input-from" type="text" name="from" value="0">
+					</div>
+					<div class="range__block-to">
+						<label class="range__to" for="to">До</label>
+						<input class="range__input-to" type="text" name="to" value="15000">
+					</div>
 				</div>
+				<h2 class="customize__grid-radio">Сетка:</h2>
+				<div class="radio-item radio-item_active" onclick="radio(this)">
+					<a href="##">Адаптивная</a>
+				</div>
+				<div class="radio-item" onclick="radio(this)">
+					<a href="##">Фиксированная</a>
+				</div>
+				<div class="radio-item" onclick="radio(this)">
+					<a href="##">Резиновая</a>
+				</div>
+				<h2 class="customize__grid-checkbox">Особенности:</h2>
+				<div class="checkbox-item checkbox-item_active" onclick="checkbox(this)">
+					<a href="##">Слайдер</a>
+				</div>
+				<div class="checkbox-item" onclick="checkbox(this)">
+					<a href="##">Блок</a>
+				 преимуществ</div>
+				<div class="checkbox-item checkbox-item_active" onclick="checkbox(this)">
+					<a href="##">Новости</a>
+				</div>
+				<div class="checkbox-item" onclick="checkbox(this)">
+					<a href="##">Галерея</a>
+				</div>
+				<div class="checkbox-item" onclick="checkbox(this)">
+					<a href="##">Корзина</a>
+				</div>
+				<button class="customize__show-button" type="submit">Показать</button>
 			</form>
 			<section class="products">
 				

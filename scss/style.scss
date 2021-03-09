@@ -25,6 +25,8 @@ $heavy: 700;
 
 $middle: 0 auto;
 
+$n: none;
+
 
 %flex {
 	display: flex;
@@ -178,7 +180,7 @@ body {
 	&__offer__button {
 		width: 53.333333%;
 		height: 50px;
-		border: none;
+		border: $n;
 		border-radius: 3px;
 		color: #FFF;
 		text-transform: uppercase;
@@ -206,7 +208,7 @@ body {
 	height: 2px;
 	line-height: 0;
 	background-color: #EEE;
-	border: none;
+	border: $n;
 	margin: 0;
 	padding: 0 1px;
 }
@@ -227,7 +229,7 @@ body {
 		}
 
 		&__list {
-			list-style: none;
+			list-style: $n;
 			padding: 0;
 		}
 	}
@@ -248,7 +250,7 @@ body {
 	&__statistics__list {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		list-style: none;
+		list-style: $n;
 		padding: 0;
 	}
 }
@@ -320,7 +322,7 @@ body {
 		width: 52px;
 		height: 2px;
 		background-color: #EEE;
-		border: none;
+		border: $n;
 		margin: 0;
 	}
 }
@@ -380,7 +382,7 @@ body {
 	text-transform: uppercase;
 	height: 50px;
 	width: 100%;
-	border: none;
+	border: $n;
 	color: white;
 	background-color: #FB565A;
 	border-radius: 3px;
@@ -478,7 +480,7 @@ body {
 		box-sizing: border-box;
 
 		border-radius: 3px;
-		border: none;
+		border: $n;
 
 		text-transform: uppercase;
 		background-color: #FB565A;
@@ -504,8 +506,6 @@ body {
 	width: 100%;
 	height: 118px;
 	padding: 16px;
-
-	resize: none;
 
 	border-radius: 3px;
 	border: 2px solid #D7DCDE;
@@ -545,7 +545,7 @@ body {
 	&__crumbs {
 		margin: 0;
 		padding: 0;
-		list-style: none;
+		list-style: $n;
 		@extend %flex;
 	}
 }
@@ -560,12 +560,13 @@ body {
 		color: rgba(0, 0, 0, 0.3);
 
 		&:focus, &:active {
-			outline: none;
+			outline: $n;
 		}
 	}
 
 	&__triangle {
 		margin-right: 18px;
+		cursor: pointer;
 	}
 
 	&__triangle:last-child {
@@ -579,7 +580,7 @@ body {
 
 .link_active {
 	color: rgba(0, 0, 0, 1);
-	outline: none;
+	outline: $n;
 }
 
 .triangle {
@@ -600,13 +601,91 @@ body {
 }
 
 .customize {
-	height: 200px;
-	width: 100%;
+	width: 260px / 400px * 100%;
 	position: relative;
+	@extend %flex;
+	flex-direction: column;
+
+	&__grid-radio {
+		text-transform: uppercase;
+		@include fontz(18px);
+		margin-bottom: 13px;
+	}
+
+	&__grid-checkbox {
+		text-transform: uppercase;
+		@include fontz(18px);
+		margin: 43px 0 13px 0;
+	}
+
+	&__show-button {
+		text-transform: uppercase;
+		width: 100%;
+		min-height: 50px;
+		@extend %flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #EEE;
+		line-height: 1.2em;
+		border-radius: 3px;
+		border: $n;
+		margin-top: 48px;
+		font-weight: $average;
+	}
+}
+
+.radio-item {
+	margin-bottom: 15px;
+	cursor: pointer;
+	margin-right: auto;
+
+	&:before {
+		content: "";
+		background-image: url('../img/radio-off.png');
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		margin-right: 11px;
+		margin-bottom: -6px;
+	}
+
+	&_active:before {
+		content: "";
+		background-image: url("../img/radio-on.png");
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		margin-bottom: -6px;
+	}
+}
+
+.checkbox-item {
+	margin-bottom: 17px;
+	cursor: pointer;
+	margin-right: auto;
+
+	&:before {
+		content: "";
+		background-image: url('../img/checkbox-off.png');
+		width: 23px;
+		height: 23px;
+		display: inline-block;
+		margin-bottom: -6px;
+		margin-right: 11px;
+	}
+
+	&_active:before {
+		content: "";
+		background-image: url('../img/checkbox-on.png');
+		width: 25px;
+		height: 23px;
+		display: inline-block;
+		margin-bottom: -6px;
+	}
 }
 
 .range {
-	width: 260px / 400px * 100%;
+	width: 100%;
 	height: 80px;
 	border-radius: 3px;
 
@@ -621,6 +700,60 @@ body {
 		background-color: #D7DCDF;
 		width: 205px / 260px * 100%;
 		align-self: center;
+	}
+
+	&__bar {
+		height: 100%;
+		background-color: #00CA74;
+	}
+
+	&__toggle {
+	width: 4px;
+	height: 4px;
+	border: 8px solid white;
+	border-radius: 50%;
+	box-shadow: 0 2px 0 rgba(171, 171, 171, 0.3);
+	cursor: pointer;
+	background-color: #ABABAB;
+	position: absolute;
+	top: -9px;
+	}
+
+	&__inputs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		width: 100%;
+		margin: 14px 0 54px 0;
+	}
+
+	&__toggle:hover,
+	&__toggle:focus {
+		transform: scale(1.2);
+		outline: $n;
+		transition: 200ms;
+	}
+
+	&__block-from,
+	&__block-to {
+		@extend %flex;
+		max-height: 38px;
+		align-items: center;
+	}
+
+	&__from,
+	&__to {
+		text-transform: uppercase;
+		margin-right: 12px;
+	}
+
+	&__input-from,
+	&__input-to {
+		width: 80px / 130px * 100%;
+		max-width: 80px;
+		background-color: #EEE;
+		height: 38px;
+		display: flex;
+		text-align: center;
 	}
 }
 

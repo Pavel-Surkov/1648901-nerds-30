@@ -521,6 +521,7 @@ body {
 
 	&__header {
 		font-weight: $average;
+		line-height: 1.2em;
 		@include fontz(55px);
 	}
 }
@@ -681,6 +682,7 @@ body {
 		height: 23px;
 		display: inline-block;
 		margin-bottom: -6px;
+		margin-right: 9px;
 	}
 }
 
@@ -757,6 +759,33 @@ body {
 	}
 }
 
-.products {
+.cards {
+	@extend %flex;
 
+	&__item {
+		width: 360px / 800px * 100%;
+		min-height: 618px;
+		border-radius: 3px;
+		margin: 0 10% 30px 0;
+
+		overflow: hidden;
+
+		&__header {
+			background-color: #4D4D4D;
+			height: 40px;
+			opacity: 0.1;
+		}
+	}
+
+	&__item:nth-child(2n) {
+		margin-right: 0;
+	}
+
+	&__container {
+		overflow: hidden;
+	}
+
+	&__pic {
+		
+	}
 }

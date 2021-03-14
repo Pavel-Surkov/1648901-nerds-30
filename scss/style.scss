@@ -761,6 +761,7 @@ body {
 
 .cards {
 	@extend %flex;
+	margin-bottom: 25px;
 
 	&__item {
 		width: 360px / 800px * 100%;
@@ -768,13 +769,24 @@ body {
 		border-radius: 3px;
 		margin: 0 10% 30px 0;
 
+		transition: 200ms;
 		overflow: hidden;
 
 		&__header {
 			background-color: #4D4D4D;
 			height: 40px;
+			@extend %flex;
+			align-items: center;
 			opacity: 0.1;
+
+			box-sizing: border-box;
+			padding-left: 16px;
 		}
+	}
+
+	&__item:hover {
+		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+		transition: 250ms;
 	}
 
 	&__item:nth-child(2n) {
@@ -783,9 +795,28 @@ body {
 
 	&__container {
 		overflow: hidden;
+		border: 1px solid #EEE;
+		border-radius: 3px;
+		max-height: 577px;
 	}
 
 	&__pic {
-		
+		object-fit: contain;
 	}
+
+	&__underblock {
+		box-sizing: border-box;
+		background-color: #EEE;
+		width: 100%;
+		min-height: 231px;
+		padding: 26px 53px/360px*100%
+		44px 53px/360px*100%;
+		transition: 300ms;
+
+		&_active {
+			transform: translateY(-100%);
+			transition: 300ms;
+		}
+	}
+
 }

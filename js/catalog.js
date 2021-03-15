@@ -29,3 +29,19 @@ function radio(element) {
 function checkbox(element) {
 	element.classList.toggle('checkbox-item_active');
 }
+
+(function blockUp() {
+	let cards = document.querySelectorAll('.cards__item');
+	let blocks = document.querySelectorAll('.cards__underblock');
+	let headers = document.querySelectorAll('.cards__item__header');
+	for(let i = 0; i < cards.length; i++) {
+		cards[i].addEventListener('mouseover', function() {
+			blocks[i].classList.add('cards__underblock_active');
+			headers[i].classList.add('cards__item__header_active');
+		});
+		cards[i].addEventListener('mouseout', function() {
+			blocks[i].classList.remove('cards__underblock_active');
+			headers[i].classList.remove('cards__item__header_active');
+		})
+	}
+})();

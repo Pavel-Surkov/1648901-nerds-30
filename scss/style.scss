@@ -781,6 +781,10 @@ body {
 
 			box-sizing: border-box;
 			padding-left: 16px;
+
+			&_active {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -797,7 +801,7 @@ body {
 		overflow: hidden;
 		border: 1px solid #EEE;
 		border-radius: 3px;
-		max-height: 577px;
+		max-height: 576px;
 	}
 
 	&__pic {
@@ -811,11 +815,11 @@ body {
 		min-height: 231px;
 		padding: 26px 53px/360px*100%
 		44px 53px/360px*100%;
-		transition: 300ms;
+		transition: 0.5s;
 
 		&_active {
 			transform: translateY(-100%);
-			transition: 300ms;
+			transition: 0.5s;
 		}
 	}
 

@@ -843,10 +843,30 @@ body {
 			border: none;
 		}
 
+		&__price:hover,
+		&__price:focus {
+			background-color: #E74246;
+			outline: none;
+		}
+
+		&__price:active {
+			background-color: #D7373B;
+		}
+
 		&_active {
 			transform: translateY(-100%);
 			transition: 0.5s;
 		}
 	}
+}
 
+.underblock__header__link:hover,
+.underblock__header__link:focus {
+	color: #FB565A;
+	outline: none;
+}
+
+.underblock__header__link:active {
+	color: #000;
+	opacity: 0.3;
 }

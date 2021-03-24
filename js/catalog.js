@@ -45,3 +45,13 @@ function checkbox(element) {
 		})
 	}
 })();
+
+(function heightSize() {
+	let cardsItem = document.querySelectorAll('.cards__item');
+	let cardsContainer = document.querySelectorAll('.cards__container');
+	let width = cardsContainer[0].offsetWidth;
+	for(let i = 0; i < cardsContainer.length; i++) {
+		cardsContainer[i].style.height = `${width * 1.61}px`;
+		cardsItem[i].style.height = `${width * 1.61 + 40}px`;
+	}
+})();

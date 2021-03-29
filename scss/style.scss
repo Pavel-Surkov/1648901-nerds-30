@@ -27,6 +27,8 @@ $middle: 0 auto;
 
 $n: none;
 
+$active_text: rgba(256, 256, 256, 0.3);
+
 
 %flex {
 	display: flex;
@@ -44,15 +46,15 @@ body {
 	background-color: #FFF;
 }
 
-.background_gray {
-	width: 100%;
-	background-color: #EEE;
-}
-
 .header {
 	max-width: 1200px;
 	margin: $middle;
-	background-color: inherit;
+	background-color: #EEE;
+}
+
+.background_gray {
+	width: 100%;
+	background-color: #EEE;
 }
 
 .navigation {
@@ -143,6 +145,18 @@ body {
 	border-radius: 3px;
 	text-transform: uppercase;
 	color: #FFF;
+	outline: $n;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		background-color: #E74246;
+	}
+
+	&:active {
+		background-color: #D7373B;
+		color: $active_text;
+	}
 }
 
 .list {
@@ -184,24 +198,48 @@ body {
 		border-radius: 3px;
 		color: #FFF;
 		text-transform: uppercase;
+		outline: $n;
 	}
-
-
-	&offer__button:hover {}
-
-	&offer__button:active {}
-
-	&offer__button:focus {}
 }
 
 .offer__button_web-sites {
 	background-color: #FB565A;
+
+	&:hover,
+	&:focus {
+		background-color: #E74246;
+	}
+
+	&:active {
+		background-color: #D7373B;
+		color: $active_text;
+	}
 }
 .offer__button_apps {
 	background-color: #00CA74;
+
+	&:hover,
+	&:focus {
+		background-color: #00BC6C;
+	}
+
+	&:active {
+		background-color: #00AA62;
+		color: $active_text;
+	}
 }
 .offer__button_presentations {
 	background-color: #EFC849;
+
+	&:hover,
+	&:focus {
+		background-color: #EAB534;
+	}
+
+	&:active {
+		background-color: #E5A722;
+		color: $active_text;
+	}
 }
 
 .underline {
@@ -308,6 +346,8 @@ body {
 	@extend %flex;
 	align-items: center;
 	justify-content: space-around;
+	margin-bottom: 80px;
+	border-bottom: 2px solid #EEE;
 
 	&__link {
 		@extend %flex;
@@ -342,7 +382,7 @@ body {
 
 .location {
 	height: 416px;
-	margin: 80px auto 0 auto;
+	margin: 60px auto 0 auto;
 	max-width: 1520px;
 	background-image: url(../img/map.png);
 	background-repeat: no-repeat;
@@ -387,6 +427,17 @@ body {
 	background-color: #FB565A;
 	border-radius: 3px;
 	margin-top: 40px;
+	outline: $n;
+
+	&:hover,
+	&:focus {
+		background-color: #E74246;
+	}
+
+	&:active {
+		background-color: #D7373B;
+		color: $active_text;
+	}
 }
 
 .footer {
@@ -405,6 +456,20 @@ body {
 		@extend %flex;
 		justify-content: center;
 		align-items: center;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			background-color: #E74246;
+		}
+
+		&:active {
+			background-color: #D7373B;
+		}
+
+		&:active path {
+			opacity: 0.3;
+		}
 	}
 
 	&__sale {
@@ -481,10 +546,21 @@ body {
 
 		border-radius: 3px;
 		border: $n;
+		outline: $n;
 
 		text-transform: uppercase;
 		background-color: #FB565A;
 		color: #FFF;
+
+		&:hover,
+		&:focus {
+			background-color: #E74246;
+		}
+
+		&:active {
+			background-color: #D7373B;
+			color: $active_text;
+		}
 	}
 }
 
@@ -598,7 +674,7 @@ body {
 .general {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
-	height: 200px;
+	height: auto;
 }
 
 .customize {
@@ -606,6 +682,7 @@ body {
 	position: relative;
 	@extend %flex;
 	flex-direction: column;
+	height: 100%;
 
 	&__grid-radio {
 		text-transform: uppercase;
@@ -840,13 +917,13 @@ body {
 			border-radius: 3px;
 			background-color: #FB565A;
 			color: #FFF;
-			border: none;
+			border: $n;
+			outline: $n;
 		}
 
 		&__price:hover,
 		&__price:focus {
 			background-color: #E74246;
-			outline: none;
 		}
 
 		&__price:active {
@@ -864,10 +941,45 @@ body {
 .underblock__header__link:hover,
 .underblock__header__link:focus {
 	color: #FB565A;
-	outline: none;
+	outline: $n;
 }
 
 .underblock__header__link:active {
 	color: #000;
 	opacity: 0.3;
+}
+
+.pagination {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	padding-left: 33.333333%;
+
+	&__middle {
+
+	}
+
+	&__button {
+		@extend %flex;
+		align-items: center;
+		justify-content: center;
+		height: 50px;
+		border-radius: 3px;
+		border: 3px solid #EEE;
+		background-color: #EEE;
+		width: 50px;
+		font-weight: $average;
+		margin-right: 11px;
+		cursor: pointer;
+	}
+
+	&_active {
+		background-color: #FFF;
+	}
+
+	&__next {
+		max-width: 260px;
+		width: 260px / 800px * 100%;
+		text-transform: uppercase;
+	}
 }

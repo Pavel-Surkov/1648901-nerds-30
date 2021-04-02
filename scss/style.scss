@@ -28,6 +28,7 @@ $middle: 0 auto;
 $n: none;
 
 $active_text: rgba(256, 256, 256, 0.3);
+$active_text_black: rgba(0, 0, 0, 0.3);
 
 
 %flex {
@@ -69,6 +70,16 @@ body {
 
 	&__logo {
 		min-width: 65px;
+
+		&:hover path,
+		&:focus path {
+			opacity: 0.7;
+		}
+
+		&:active path {
+			opacity: 0.3;
+		}
+
 	}
 
 	&__link {
@@ -85,10 +96,18 @@ body {
 			border-bottom: 2px solid #FB565A;
 			box-sizing: border-box;
 		}
+
+		&:focus,
+		&:hover {
+			color: #FB565A;
+		}
+
+		&:active {
+			color: $active_text_black;
+		}
 	}
 
 	&__basket {
-		margin-bottom: 9px;
 		width: auto;
 		margin-left: auto;
 		font-weight: $average;
@@ -100,7 +119,7 @@ body {
 		width: 15px;
 		height: 15px;
 		background-image: url(../img/cart-icon.svg);
-		margin: 0 25px -1px 0;
+		margin: 4px 25px 0 0;
 	}
 }
 
@@ -511,10 +530,23 @@ body {
 	}
 
 	&__close {
+		display: block;
 		width: 21px;
 		height: 21px;
 		margin-left: auto;
-		background-color: gray;
+	}
+
+	&__close path {
+		fill: #FB565A 30%;
+	}
+
+	&__close:hover path,
+	&__close:focus path {
+		fill: #FB565A;
+	}
+
+	&__close:active path {
+		fill: #FB565A 10%;
 	}
 
 	&__name,
@@ -955,10 +987,6 @@ body {
 	display: flex;
 	padding-left: 33.333333%;
 
-	&__middle {
-
-	}
-
 	&__button {
 		@extend %flex;
 		align-items: center;
@@ -971,10 +999,25 @@ body {
 		font-weight: $average;
 		margin-right: 11px;
 		cursor: pointer;
+
+		&:hover {
+			background-color: #DFDFDF;
+			border-color: #DFDFDF;
+		}
+
+		&:active {
+			background-color: #FFF;
+			outline: none;
+		}
 	}
 
 	&_active {
 		background-color: #FFF;
+		outline: none;
+
+		&:hover {
+			background-color: #FFF;
+		}
 	}
 
 	&__next {

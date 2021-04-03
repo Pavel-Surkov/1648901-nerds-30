@@ -80,32 +80,24 @@
 					</div>
 				</div>
 				<h2 class="customize__grid-radio">Сетка:</h2>
-				<div class="radio-item radio-item_active" onclick="radio(this)">
-					<a href="##">Адаптивная</a>
-				</div>
-				<div class="radio-item" onclick="radio(this)">
-					<a href="##">Фиксированная</a>
-				</div>
-				<div class="radio-item" onclick="radio(this)">
-					<a href="##">Резиновая</a>
-				</div>
+				<input type="radio" class="radio_hidden" name="radio" value="Адаптивная" id="rubber">
+				<label class="radio-item radio-item_active" onclick="radio(this)" for="adaptive" tabindex="0">Адаптивная</label>
+				<input type="radio" class="radio_hidden" name="radio" value="Фиксированная" id="rubber">
+				<label class="radio-item" onclick="radio(this)" for="fixed" tabindex="0">Фиксированная</label>
+				<input type="radio" class="radio_hidden" name="radio" value="Резиновая" id="rubber">
+				<label class="radio-item" onclick="radio(this)" for="rubber" tabindex="0">Резиновая</label>
 				<h2 class="customize__grid-checkbox">Особенности:</h2>
-				<div class="checkbox-item checkbox-item_active" onclick="checkbox(this)">
-					<a href="##">Слайдер</a>
-				</div>
-				<div class="checkbox-item" onclick="checkbox(this)">
-					<a href="##">Блок</a>
-					преимуществ</div>
-				<div class="checkbox-item checkbox-item_active" onclick="checkbox(this)">
-					<a href="##">Новости</a>
-				</div>
-				<div class="checkbox-item" onclick="checkbox(this)">
-					<a href="##">Галерея</a>
-				</div>
-				<div class="checkbox-item" onclick="checkbox(this)">
-					<a href="##">Корзина</a>
-				</div>
-				<button class="customize__show-button" type="submit">Показать</button>
+				<input class="checkbox_hidden" type="checkbox" value="slider" id="slider" name="slider">
+				<label onclick="checkbox(this)" class="checkbox-item checkbox-item_active" for="slider" tabindex="0">Слайдер</label>
+				<input class="checkbox_hidden" type="checkbox" value="list of advantages" id="list" name="list">
+				<label onclick="checkbox(this)" class="checkbox-item" for="list" tabindex="0">Блок преимуществ</label>
+				<input class="checkbox_hidden" type="checkbox" id="news" value="news" name="news">
+				<label onclick="checkbox(this)" class="checkbox-item checkbox-item_active" for="news" tabindex="0">Новости</label>
+				<input class="checkbox_hidden" type="checkbox" value="galery" id="galery" name="galery">
+				<label onclick="checkbox(this)" class="checkbox-item" for="galery" tabindex="0">Галерея</label>
+				<input class="checkbox_hidden" type="checkbox" value="basket" id="basket" name="basket">
+				<label onclick="checkbox(this)" class="checkbox-item" for="basket" tabindex="0">Корзина</label>
+				<button class="customize__show-button" type="submit" formaction="https://echo.htmlacademy.ru/">Показать</button>
 			</form>
 			<section class="cards">
 				<article class="cards__item">

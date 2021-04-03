@@ -793,6 +793,11 @@ body {
 	}
 }
 
+.checkbox_hidden,
+.radio_hidden {
+	display: none;
+}
+
 .checkbox-item {
 	margin-bottom: 17px;
 	cursor: pointer;
@@ -1006,6 +1011,7 @@ body {
 }
 
 .pagination {
+	box-sizing: border-box;
 	width: 100%;
 	height: 50px;
 	display: flex;
